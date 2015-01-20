@@ -145,7 +145,7 @@ describe('Element.Style', function(){
 				'}'
 			].join('');
 
-			// fix this, see https://github.com/mootools/mootools-core/issues/2265
+			// fix this, see https://github.com/spxis/mootools-core-dist/issues/2265
 			if (style.styleSheet) style.styleSheet.cssText = definition;
 			else style.set('text', definition);
 
@@ -199,7 +199,7 @@ describe('Element.Style', function(){
 				'}'
 			].join('');
 
-			// fix this, see https://github.com/mootools/mootools-core/issues/2265
+			// fix this, see https://github.com/spxis/mootools-core-dist/issues/2265
 			if (style.styleSheet) style.styleSheet.cssText = definition;
 			else style.set('text', definition);
 
@@ -329,7 +329,7 @@ describe('Element.Style', function(){
 				'}'
 			].join('');
 
-			// fix this, see https://github.com/mootools/mootools-core/issues/2265
+			// fix this, see https://github.com/spxis/mootools-core-dist/issues/2265
 			if (style.styleSheet) style.styleSheet.cssText = definition;
 			else style.set('text', definition);
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-git remote add mootools https://github.com/mootools/mootools-core.git
+git remote add mootools https://github.com/spxis/mootools-core-dist.git
 git fetch mootools
 
 # Valerio Proietti 

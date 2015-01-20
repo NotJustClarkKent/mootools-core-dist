@@ -17,7 +17,7 @@ You are welcome to contribute to MooTools! What we ask of you:
 a. __To report a bug:__
 
    1. Create a [jsFiddle](http://jsfiddle.net/) with the minimal amount of code to reproduce the bug.
-   2. Create a [GitHub Issue](https://github.com/mootools/mootools-core/issues), and link to the jsFiddle.
+   2. Create a [GitHub Issue](https://github.com/spxis/mootools-core-dist/issues), and link to the jsFiddle.
 
 b. __To fix a bug:__
 
@@ -61,7 +61,7 @@ See the changelog or the blog related to each version for migrating your code.
 
 
 ### Advanced Building and Testing
-See the [Gruntfile](https://github.com/mootools/mootools-core/blob/master/Gruntfile.js) and [MooTools packager](https://github.com/ibolmo/grunt-mootools-packager) for further options.
+See the [Gruntfile](https://github.com/spxis/mootools-core-dist/blob/master/Gruntfile.js) and [MooTools packager](https://github.com/ibolmo/grunt-mootools-packager) for further options.
 
 **Examples**
 
@@ -80,7 +80,7 @@ You'll need to add a specific task to the Gruntfile. See [packager's documentati
 
 I you want to test your local repo you need just some small steps. Follow these in order:
 
-    $ git clone https://github.com/mootools/mootools-core  # clone the MooTools repo
+    $ git clone https://github.com/spxis/mootools-core-dist  # clone the MooTools repo
     $ cd mootools-core                                     # get into the directory
     $ npm install                                          # install de testing tools
     $ npm install grunt-cli -g                             # install the Grunt command line interface
@@ -106,7 +106,7 @@ Every new Build and Pull Request is now tested on [Travis](https://travis-ci.org
 
 [Travis](https://travis-ci.org/) testing uses [PhantomJS](http://phantomjs.org/) which is a headless browser. When connected to [Sauce Labs](https://saucelabs.com/) then it is possible to choose any number of [different Browsers and Platforms](https://saucelabs.com/platforms). You will need in this case to change the login key so it will match your account.
 
-To add new Browsers in [Sauce Labs](https://saucelabs.com/) testing you can do some changes in the __[Gruntfile.js](https://github.com/mootools/mootools-core/blob/master/Gruntfile.js)__:
+To add new Browsers in [Sauce Labs](https://saucelabs.com/) testing you can do some changes in the __[Gruntfile.js](https://github.com/spxis/mootools-core-dist/blob/master/Gruntfile.js)__:
 
  - add a new browser to the custom launchers already in the Gruntfile.
 
