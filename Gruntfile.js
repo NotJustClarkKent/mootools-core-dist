@@ -54,15 +54,17 @@ module.exports = function(grunt) {
 	var tasks = options.travis.build == 'default' ? compatBuild : nocompatBuild;
 	tasks =  pullRequest != 'false' ? tasks.concat('karma:continuous') : tasks.concat('karma:sauceTask');
 
-	grunt.registerTask('default', compatBuild.concat('karma:continuous'));		// local testing - compat build
-	grunt.registerTask('nocompat', nocompatBuild.concat('karma:continuous'));	// local testing - no compat build
-	grunt.registerTask('default:travis', tasks);								// Travis & Sauce Labs
-	grunt.registerTask('distBuild', [											// task to build and test /dist files
-		// Build dist files
-		'clean:dist', 'packager:dist-all', 'packager:dist-nocompat', 'packager:dist-server', 'uglify',
-		// Test specs against dist files
-		'clean:specs', 'packager:specs', 'karma:compatFull', 'karma:compatUglyfied',
-		'clean:specs', 'packager:specs-nocompat', 'karma:nocompatFull', 'karma:nocompatUglified'
-	]);
+    //grunt.registerTask('default', compatBuild.concat('karma:continuous'));		// local testing - compat build
+    //grunt.registerTask('nocompat', nocompatBuild.concat('karma:continuous'));	// local testing - no compat build
+    //grunt.registerTask('default:travis', tasks);								// Travis & Sauce Labs
+    //grunt.registerTask('distBuild', [											// task to build and test /dist files
+    //    // Build dist files
+    //    'clean:dist', 'packager:dist-all', 'packager:dist-nocompat', 'packager:dist-server', 'uglify',
+    //    // Test specs against dist files
+    //    'clean:specs', 'packager:specs', 'karma:compatFull', 'karma:compatUglyfied',
+    //    'clean:specs', 'packager:specs-nocompat', 'karma:nocompatFull', 'karma:nocompatUglified'
+    //]);
+
+    grunt.registerTask('default', ['clean:specs', 'packager:all', 'packager:specs', 'packager:nocompat', 'packager:specs-nocompat']);
 
 };
